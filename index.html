@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VDL</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                var scrollTop = $(window).scrollTop();
+
+                console.log(scrollTop);
+
+                if(scrollTop >= 100) {
+                    $(".in_header").css({
+                        display: "none",
+                    })
+                    $(".scroll_header").fadeIn().css({
+                        display: "flex",
+                        justifyContent: "space-between",
+                    });
+                    $("header").css({
+                        backgroundColor: "black",
+                    });
+                    $(".gnb > li > a").css({
+                        color: "white",
+                    });
+                } else {
+                    $("header").css({
+                        backgroundColor: "white",
+                    })
+                    $(".gnb > li > a").css({
+                        color: "#333",
+                    });
+                    $(".in_header").css({
+                        display: "flex",
+                    });
+                    $(".scroll_header").css({
+                        display: "none",
+                    })
+                }
+            });
+        });
+    </script>
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+    
+        body {
+          background: #fff;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+    
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+    
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        /* section_1 swiper end */
+
+        .mb_sec_5_con > .swiper {
+            margin: 0px auto;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mb_sec_5_con > .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="in_header">
+                <div class="logo">
+                    <a href="#"><img src="img/header_logo_b.png" alt="VDL브이디엘"></a>
+                </div>
+                <ul class="gnb">
+                    <li><a href="#">PRODUCT</a></li>
+                    <li><a href="#">BRAND</a></li>
+                    <li><a href="#">COLLECTION</a></li>
+                    <li><a href="#">ONLINE <br>STORE</a></li>
+                    <li><a href="#">OFFLINE <br>STORE</a></li>
+                </ul>
+                <ul class="header_con">
+                    <li><a href="#"><img src="img/search_icon_b.png" alt="돋보기"></a></li>
+                    <li><a href="#"><img src="img/login_icon_b.png" alt="로그인"></a></li>
+                    <li><a href="#"><img src="img/shoppingcart_icon_b.png" alt="장바구니"></a></li>
+                </ul>
+                <ul class="mb_header_con">
+                    <li><a href="#"><img src="img/search_icon_b.png" alt="돋보기"></a></li>
+                    <li><a href="#"><img src="img/shoppingcart_icon_b.png" alt="장바구니"></a></li>
+                    <li><a href="#"><img src="img/menu_icon_b.png" alt="메뉴"></a></li>
+                </ul>
+            </div>
+            <div class="scroll_header">
+                <div class="logo">
+                    <a href="#">
+                        <img src="img/header_logo_w.png" alt="VDL브이디엘">
+                    </a>
+                </div>
+                <ul class="gnb">
+                    <li><a href="#">PRODUCT</a></li>
+                    <li><a href="#">BRAND</a></li>
+                    <li><a href="#">COLLECTION</a></li>
+                    <li><a href="#">ONLINE <br>STORE</a></li>
+                    <li><a href="#">OFFLINE <br>STORE</a></li>
+                </ul>
+                <ul class="header_con">
+                    <li><a href="#"><img src="img/search_icon_w.png" alt="돋보기"></a></li>
+                    <li><a href="#"><img src="img/login_icon_w.png" alt="로그인"></a></li>
+                    <li><a href="#"><img src="img/shoppingcart_img.png" alt="장바구니"></a></li>
+                </ul>
+                <ul class="mb_header_con">
+                    <li><a href="#"><img src="img/search_icon_w.png" alt="돋보기"></a></li>
+                    <li><a href="#"><img src="img/shoppingcart_img.png" alt="장바구니"></a></li>
+                    <li><a href="#"><img src="img/menu_icon_w.png" alt="메뉴"></a></li>
+                </ul>
+            </div>
+        </header>
+        <!-- header end -->
+        <section class="section_1">
+            <div class="sec_1_con">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper sec_1_img">
+                        <div class="swiper-slide"><img src="img/sec_1_img_1.png" alt="VDL 톤스테인 컬러코렉팅 프라이머"></div>
+                        <div class="swiper-slide"><img src="img/sec_1_img_2.png" alt="VDL 커버스테인 퍼펙팅 파운데이션"></div>
+                        <div class="swiper-slide"><img src="img/sec_1_img_3.png" alt="VDL 커버스테인 내추럴리퀴드 비비"></div>
+                        <div class="swiper-slide"><img src="img/sec_1_img_4.png" alt="VDL 치크스테인 블러셔"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                  spaceBetween: 30,
+                  centeredSlides: true,
+                  autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  },
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                });
+            </script>
+            <div class="sec_web sec_1_btn">
+                <a href="#">자세히보기</a>
+            </div>
+            <div class="mb_sec_1_con">
+                <div class="mb_sec_1_img">
+                    <img src="img/mb_sec_1_img_1.png" alt="VDL 톤스테인 컬러코렉팅 프라이머">
+                </div>
+                <ul class="mb_sec_1_txt">
+                    <li>TONE STAIN<br>COLOR CORRECTING<br>PRIMER</li>
+                    <li class="sec_1_btn">
+                        <a href="#">자세히보기</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- section_1 end -->
+        <section class="section_2">
+            <div class="sec_title">
+                <h3>NEW ARRIVALS</h3>
+            </div>
+            <div class="sec_2_con">
+                <div class="sec_2_left">
+                    <img src="img/sec_2_img_1.png" alt="VDL 톤스테인 컬러코렉팅 프라이머">
+                </div>
+                <div class="sec_2_right">
+                    <div class="con con_1">
+                        <a href="#"><img src="img/sec_2_con_1.png" alt="VDL 톤스테인 컬러코렉팅 프라이머"></a>
+                        <p><a href="#">VDL 톤스테인 <br>컬러코렉팅 프라이머</a></p>
+                        <h3><a href="#">26,000원</a></h3>
+                    </div>
+                    <div class="con con_2">
+                        <a href="#"><img src="img/sec_2_con_2.png" alt="VDL 커버스테인 내추럴리퀴드 비비"></a>
+                        <p><a href="#">VDL 커버스테인 <br>내추럴리퀴드 비비</a></p>
+                        <h3><a href="#">25,000원</a></h3>
+                    </div>
+                    <div class="con con_3">
+                        <a href="#"><img src="img/sec_2_con_3.png" alt="VDL 립스테인 컨디셔닝 립세린"></a>
+                        <p><a href="#">VDL 립스테인 <br>컨디셔닝 립세린</a></p>
+                        <h3><a href="#">18,000원</a></h3>
+                    </div>
+                    <div class="con con_4">
+                        <a href="#"><img src="img/sec_2_con_4.png" alt="VDL 엑스퍼트 언더 아이 프라이머"></a>
+                        <p><a href="#">VDL 엑스퍼트 <br>언더 아이 프라이머</a></p>
+                        <h3><a href="#">16,000원</a></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section_2 end -->
+        <section class="section_3">
+            <div class="sec_title">
+                <h3>BEST SELLER</h3>
+            </div>
+            <div class="sec_3_con">
+                <div class="con con_1">
+                    <a href="#"><img src="img/sec_3_img_1.png" alt="VDL 커버스테인 퍼펙팅 파운데이션"></a>
+                    <p><a href="#">VDL 커버스테인 <br>퍼펙팅 파운데이션</a></p>
+                    <h3><a href="#">30,000원</a></h3>
+                </div>
+                <div class="con con_2">
+                    <a href="#"><img src="img/sec_3_img_2.png" alt="VDL 톤스테인 컬러코렉팅 프라이머"></a>
+                    <p><a href="#">VDL 톤스테인 <br>컬러코렉팅 프라이머</a></p>
+                    <h3><a href="#">26,000원</a></h3>
+                </div>
+                <div class="con con_3">
+                    <a href="#"><img src="img/sec_3_img_3.png" alt="VDL 엑스퍼트 컬러 프라이머 포 아이즈"></a>
+                    <p><a href="#">VDL 엑스퍼트 컬러 <br>프라이머 포 아이즈</a></p>
+                    <h3><a href="#">16,000원</a></h3>
+                </div>
+                <div class="con con_4">
+                    <a href="#"><img src="img/sec_3_img_4.png" alt="VDL 치크스테인 블러셔"></a>
+                    <p><a href="#">VDL 치크스테인 <br>블러셔</a></p>
+                    <h3><a href="#">23,000원</a></h3>
+                </div>
+            </div>
+        </section>
+        <!-- section_3 end -->
+        <section class="section_4">
+            <div class="sec_title">
+                <h3>VDL'S PICK</h3>
+            </div>
+            <div class="sec_4_con">
+                <div class="sec_4_left">
+                    <img src="img/sec_4_img.png" alt="VDL 추천 제품">
+                </div>
+                <div class="sec_4_right">
+                    <div class="con con_1">
+                        <a href="#"><img src="img/sec_4_con_1.png" alt="VDL 루미레이어 프라이머"></a>
+                        <p><a href="#">VDL 루미레이어 <br>프라이머</a></p>
+                        <h3><a href="#">23,000원</a></h3>
+                    </div>
+                    <div class="con con_2">
+                        <a href="#"><img src="img/sec_4_con_2.png" alt="VDL 루미레이어 로지 퍼펙트 프라이머"></a>
+                        <p><a href="#">VDL 루미레이어 로지 <br>퍼펙트 프라이머</a></p>
+                        <h3><a href="#">28,000원</a></h3>
+                    </div>
+                    <div class="con con_3">
+                        <a href="#"><img src="img/sec_4_con_3.png" alt="VDL 엑스퍼트 퍼펙트 핏 쿠션"></a>
+                        <p><a href="#">VDL 엑스퍼트 <br>퍼펙트 핏 쿠션</a></p>
+                        <h3><a href="#">45,000원</a></h3>
+                    </div>
+                    <div class="con con_4">
+                        <a href="#"><img src="img/sec_4_con_4.png" alt="VDL 엑스퍼트 퍼펙트 핏 파운데이션"></a>
+                        <p><a href="#">VDL 엑스퍼트 <br>퍼펙트 핏 파운데이션</a></p>
+                        <h3><a href="#">38,000원</a></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section_4 end -->
+        <section class="section_5">
+            <div class="sec_title">
+                <h3>INSTAGRAM</h3>
+                <p>@vdl_cosmetics</p>
+            </div>
+            <ul class="sec_5_img">
+                <li><a href="#"><img src="img/sec_5_img_1.png" alt="VDL 인스타그램"></a></li>
+                <li><a href="#"><img src="img/sec_5_img_2.png" alt="VDL 인스타그램"></a></li>
+                <li><a href="#"><img src="img/sec_5_img_3.png" alt="VDL 인스타그램"></a></li>
+                <li><a href="#"><img src="img/sec_5_img_4.png" alt="VDL 인스타그램"></a></li>
+            </ul>
+            <div class="mb_sec_5_con">
+                <div class="swiper mySwiper_2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/sec_5_img_1.png" alt="VDL 인스타그램"></div>
+                        <div class="swiper-slide"><img src="img/sec_5_img_2.png" alt="VDL 인스타그램"></div>
+                        <div class="swiper-slide"><img src="img/sec_5_img_3.png" alt="VDL 인스타그램"></div>
+                        <div class="swiper-slide"><img src="img/sec_5_img_4.png" alt="VDL 인스타그램"></div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var swiper = new Swiper(".mySwiper_2", {
+                  grabCursor: true,
+                  effect: "creative",
+                  creativeEffect: {
+                    prev: {
+                      shadow: true,
+                      translate: [0, 0, -400],
+                    },
+                    next: {
+                      translate: ["100%", 0, 0],
+                    },
+                  },
+                });
+            </script>
+        </section>
+        <!-- section_5 end -->
+        <footer>
+            <div class="ft_logo">
+                <a href="#"><img src="img/header_logo_w.png" alt="VDL브이디엘"></a>
+            </div>
+            <div class="ft_top_con">
+                <ul>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">매장안내</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+                <select>
+                    <option>KOREA</option>
+                    <option>CANADA</option>
+                </select>
+            </div>
+            <div class="ft_bottom_con">
+                <ul>
+                    <li>CEO Lee Jung Ae</li>
+                    <li>LG GwangHwaMoon Building, 58, Saemunan-ro, Jongno-gu, Seoul, Korea</li>
+                    <li>business license number 107-81-98143</li>
+                    <li>대표이사 이정애</li>
+                    <li>서울시 종로구 새문안로 58 LG광화문빌딩</li>
+                    <li>사업자 등록번호 : 107-81-98143</li>
+                    <li>통신판매업 신고번호 : 2011-서울종로-0910</li>
+                    <li>VDL고객 상담실(브랜드 제품, 마케팅 문의) : 080-023-7007</li>
+                    <li>개인정보 보호책임자 : 강일만</li>
+                    <li>(주)LG생활건강</li>
+                </ul>
+                <p class="copyright">Copyright © LG H&H Co., Ltd. All Rights Reserved.</p>
+            </div>
+            <div class="mb_ft_bottom_con">
+                <ul>
+                    <li>서울시 종로구 새문안로 58 LG광화문빌딩</li>
+                    <li>대표이사 이정애</li>
+                    <li>사업자 등록번호 : 107-81-98143</li>
+                    <li>통신판매업 신고번호 : 2011-서울종로-0910</li>
+                    <li>개인정보 보호책임자 : 강일만</li>
+                    <li>(주)LG생활건강</li>
+                    <li>VDL고객 상담실(브랜드 제품, 마케팅 문의) : 080-023-7007</li>
+                </ul>
+                <p class="copyright">Copyright © LG H&H Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <!-- footer end -->
+    </div>
+</body>
+</html>
